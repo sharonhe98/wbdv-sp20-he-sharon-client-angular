@@ -6,8 +6,8 @@ import {CourseTableComponent} from './course-table-component/course-table-compon
 
 const routes: Routes = [
   {path: '', component: CourseListComponent},
-  {path: 'table/courses', component: CourseTableComponent},
-  {path: 'course/:cid', component: CourseViewerComponent},
+  {path: ':layout/courses', component: CourseTableComponent},
+  {path: ':layout/courses/:cid/modules', component: CourseViewerComponent},
 ];
 
 @NgModule({

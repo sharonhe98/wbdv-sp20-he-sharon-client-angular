@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {CourseServiceClient} from '../services/CourseServiceClient';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-course-table-component',
@@ -9,10 +10,18 @@ import {CourseServiceClient} from '../services/CourseServiceClient';
 export class CourseTableComponent implements OnInit {
 
   courses = [];
-  constructor(private service: CourseServiceClient) { }
+  layout = 'table';
+  constructor(private service: CourseServiceClient,
+              private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.service.findAllCourses().then(courses => this.courses = courses);
+    this.route.params.subscribe(params => {
+      this.layout = params.layout;
+    })
+    this.service.findAllCourses().then(courses => {
+      console.log(courses)
+      this.courses = courses;
+    });
   }
 
 }
