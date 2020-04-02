@@ -4,8 +4,8 @@ import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-course-table-component',
-  templateUrl: './course-table-component.component.html',
-  styleUrls: ['./course-table-component.component.css']
+  templateUrl: './course-table.component.html',
+  styleUrls: ['./course-table.component.css']
 })
 export class CourseTableComponent implements OnInit {
 
