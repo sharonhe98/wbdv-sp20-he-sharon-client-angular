@@ -19,11 +19,10 @@ export class ModuleListComponent implements OnInit {
     this.route.params.subscribe(params => {
       this.courseId = params.cid;
       this.moduleId = params.moduleId;
-      this.service.findModulesForCourse(this.courseId).then(modules => {
-        console.log(modules);
-        this.modules = modules;
-      });
+    })
+    this.service.findModulesForCourse(this.courseId).then(modules => {
+      console.log(modules);
+      this.modules = modules;
     });
   }
-
 }

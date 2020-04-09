@@ -1,0 +1,8 @@
+<div class="row nav-tabs col-sm" *ngFor="let lesson of lessons" >
+  <a
+    [class]="{'active': lessonId === lesson._id}"
+    class="lesson-item nav-link" href="course-viewer/{{courseId}}/modules/{{moduleId}}/lessons/{{lesson._id}}/topics">
+    {{lesson.title}}
+  </a>
+</div>
+

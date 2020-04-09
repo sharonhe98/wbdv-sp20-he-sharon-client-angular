@@ -11,6 +11,7 @@ import { CourseTableComponent } from './course-table-component/course-table.comp
 import { ModuleListComponent } from './module-list/module-list.component';
 import {ModuleServiceClient} from './services/ModuleServiceClient';
 import {LessonServiceClient} from './services/LessonServiceClient';
+import { LessonListComponent } from './lesson-list/lesson-list.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import {LessonServiceClient} from './services/LessonServiceClient';
     CourseListComponent,
     CourseViewerComponent,
     CourseTableComponent,
-    ModuleListComponent
+    ModuleListComponent,
+    LessonListComponent
   ],
   imports: [
     BrowserModule,

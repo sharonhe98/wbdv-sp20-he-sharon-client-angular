@@ -1,0 +1,20 @@
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+.nav-tabs {
+  align-content: center;
+  margin-left: 20px;
+}
+
+.lesson-item {
+  text-align: center;
+  padding-left: 10%;
+  background-color: lightgray;
+  border-radius: 5px;
+  border-bottom: darkgray 1px solid;
+  margin-right: 10px;
+  margin-left: 20px;
+}
+
+.active {
+  background-color: cornflowerblue;
+}

@@ -10,12 +10,15 @@ import {ActivatedRoute} from '@angular/router';
 export class CourseViewerComponent implements OnInit {
 
   courseId = '';
-  course = {title: 'dummy course'};
+  course = {title: 'dummy course', _id: '123'};
   constructor(private service: CourseServiceClient,
               private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.route.params.subscribe(params => this.courseId = params.cid);
+    this.route.params.subscribe(params => {
+      console.log(params.cid); this.courseId = params.cid;
+    });
+    console.log(this.courseId)
     this.service.findCourseById(this.courseId).then(course => {
         console.log(course);
         this.course = course;

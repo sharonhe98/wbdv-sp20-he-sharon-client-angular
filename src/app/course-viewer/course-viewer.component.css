@@ -1,0 +1,18 @@
+@import "~bootstrap/dist/css/bootstrap.min.css";
+.row {
+  align-content: center;
+}
+
+.modules {
+  width: 50%;
+}
+
+.lessons {
+  width: 100%;
+}
+
+.nav-brand {
+  background-color: cornflowerblue;
+  padding: 20px;
+  margin-bottom: 10px;
+}

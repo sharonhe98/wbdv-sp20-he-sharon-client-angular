@@ -1,3 +1,6 @@
-<h3 [(ngModel)]="course">{{course.title}}</h3>
-<div><app-module-list></app-module-list></div>
+<div class="nav-brand" ngModel="course">{{course.title}}</div>
+<div class="row">
+  <app-module-list class="modules col-sm-3"></app-module-list>
+  <app-lesson-list class="lessons row col-sm-8"></app-lesson-list>
+</div>
 

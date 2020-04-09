@@ -1,0 +1,8 @@
+.module-item {
+  border: grey 1px solid;
+  padding: 10px;
+}
+
+.active {
+  background-color: cornflowerblue;
+}

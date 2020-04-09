@@ -3,7 +3,8 @@ import {CourseServiceClient} from '../services/CourseServiceClient';
 
 @Component({
   selector: 'app-course-list',
-  templateUrl: './course-list.component.html',
+  template: '<h1>hello world</h1>',
+  // templateUrl: './course-list.component.html',
   styleUrls: ['./course-list.component.css']
 })
 export class CourseListComponent implements OnInit {

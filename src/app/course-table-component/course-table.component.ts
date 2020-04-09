@@ -11,13 +11,9 @@ export class CourseTableComponent implements OnInit {
 
   courses = [];
   layout = 'table';
-  constructor(private service: CourseServiceClient,
-              private route: ActivatedRoute) { }
+  constructor(private service: CourseServiceClient) { }
 
   ngOnInit(): void {
-    this.route.params.subscribe(params => {
-      this.layout = params.layout;
-    })
     this.service.findAllCourses().then(courses => {
       console.log(courses)
       this.courses = courses;
