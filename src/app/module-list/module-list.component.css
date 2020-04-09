@@ -1,6 +1,7 @@
 .module-item {
   border: grey 1px solid;
   padding: 10px;
+  margin-left: 20px;
 }
 
 .active {

@@ -1,4 +1,7 @@
-<div class="nav-brand" ngModel="course">{{course.title}}</div>
+<div class="nav-brand row" ngModel="course">
+  <a class="exit-button" href="/table/courses">x</a>
+  <h3 class="course-title">{{course.title}}</h3>
+</div>
 <div class="row">
   <app-module-list class="modules col-sm-3"></app-module-list>
   <app-lesson-list class="lessons row col-sm-8"></app-lesson-list>

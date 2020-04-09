@@ -1,4 +1,4 @@
-<div class="col-sm-2" *ngFor="let module of modules">
+<div class="col-sm" *ngFor="let module of modules">
   <div [class]="{'active' : module._id === moduleId}" class="module-item">
     <a
       href="/course-viewer/{{courseId}}/modules/{{module._id}}/lessons">{{module.title}}</a>

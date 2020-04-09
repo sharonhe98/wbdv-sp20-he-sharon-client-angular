@@ -3,6 +3,7 @@
 .nav-tabs {
   align-content: center;
   margin-left: 20px;
+  margin-top: 10px;
 }
 
 .lesson-item {
@@ -13,6 +14,7 @@
   border-bottom: darkgray 1px solid;
   margin-right: 10px;
   margin-left: 20px;
+  max-width: 150px;
 }
 
 .active {
