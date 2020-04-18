@@ -14,6 +14,11 @@ import {LessonServiceClient} from './services/LessonServiceClient';
 import { LessonListComponent } from './lesson-list/lesson-list.component';
 import { QuizzesComponent } from './quizzes/quizzes.component';
 import {QuizServiceClient} from './services/QuizServiceClient';
+import { QuizComponent } from './quiz/quiz.component';
+import {QuestionServiceClient} from './services/QuestionServiceClient';
+import { TrueFalseComponentComponent } from './true-false-component/true-false-component.component';
+import { MultipleChoiceQuestionComponent } from './multiple-choice-question/multiple-choice-question.component';
+import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -23,18 +28,23 @@ import {QuizServiceClient} from './services/QuizServiceClient';
     CourseTableComponent,
     ModuleListComponent,
     LessonListComponent,
-    QuizzesComponent
+    QuizzesComponent,
+    QuizComponent,
+    TrueFalseComponentComponent,
+    MultipleChoiceQuestionComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
+    FontAwesomeModule,
   ],
   providers: [
     CourseServiceClient,
     ModuleServiceClient,
     LessonServiceClient,
     QuizServiceClient,
+    QuestionServiceClient
   ],
   bootstrap: [AppComponent]
 })

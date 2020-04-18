@@ -1,0 +1,19 @@
+<p>multiple-choice-question works!</p>
+<h4>{{question.title}}</h4>
+<h5>{{question.question}}</h5>
+{{question._id}}
+<div *ngFor="let choice of question.choices">
+  <label>
+    <input type="radio"
+           [value]="choice"
+           [(ngModel)]="answer"
+           name="{{question._id}}"/>
+    {{choice}}
+  </label>
+</div>
+<br/>
+Your answer: {{answer}}
+<br/>
+<span [hidden]="!grading">Correct answer: {{question.correct}}</span>
+<br/>
+<button (click)="grade()">Grade</button>
