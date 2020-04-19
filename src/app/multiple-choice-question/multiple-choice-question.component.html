@@ -1,8 +1,14 @@
-<h4>{{question.title}}</h4>
-<h5>{{question.question}}</h5>
-{{question._id}}
+<div>
+<span>
+  <h4>
+    {{question.question}}
+    <span class="check-mark" [hidden]="!grading || answer !== question.correct">&#10004;</span>
+    <span [hidden]="!grading || answer === question.correct">&#10060;</span>
+  </h4>
+</span>
 <div *ngFor="let choice of question.choices">
-  <label>
+  <label class="answer-option" [class]="{'correct': grading && choice === question.correct,
+  'wrong': answer !== question.correct && grading && answer === choice}">
     <input type="radio"
            [value]="choice"
            [(ngModel)]="answer"
@@ -17,4 +23,5 @@ Your answer: {{answer}}
 <br/>
 <span [hidden]="!grading">Correct answer: {{question.correct}}</span>
 <br/>
-<button (click)="grade()">Grade</button>
+<button class="grade-button" (click)="grade()">Grade</button>
+</div>

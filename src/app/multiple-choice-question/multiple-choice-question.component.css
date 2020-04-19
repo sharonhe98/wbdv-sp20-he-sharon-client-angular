@@ -1,0 +1,25 @@
+.correct {
+  background-color: lightgreen;
+}
+
+.wrong {
+  background-color: palevioletred;
+}
+
+.answer-option {
+  display: block;
+  margin: 0;
+  padding: 10px;
+  border: grey 1px solid;
+}
+
+.grade-button {
+  background-color: green;
+  color: white;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.check-mark {
+  color: green;
+}

@@ -13,10 +13,14 @@
   border: grey 1px solid;
 }
 
-.question-with-grade {
-  width: 100%;
+.grade-button {
+  background-color: green;
+  color: white;
+  border-radius: 10px;
+  padding: 10px;
 }
 
-.question {
-  width: 100%;
+.check-mark {
+  color: green;
 }
+

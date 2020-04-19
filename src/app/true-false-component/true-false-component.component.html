@@ -1,10 +1,12 @@
 <div class="question-with-grade">
 <div class="question">
-  <span>
-    {{question.question}}
-    <span [hidden]="!grading || answer !== question.correct">&#10004;</span>
-    <span [hidden]="!grading || 'false' !== answer || 'false' === question.correct">&#10060;</span>
-  </span>
+  <div class="row">
+    <h4>
+      {{question.question}}
+      <span class="check-mark" [hidden]="!grading || answer !== question.correct">&#10004;</span>
+      <span [hidden]="!grading || 'false' !== answer || 'false' === question.correct">&#10060;</span>
+    </h4>
+  </div>
   <label class="answer-option" [class]="{'correct': grading && 'true' === question.correct,
   'wrong': answer !== question.correct && grading && answer === 'true'}">
     <input type="radio"
@@ -12,7 +14,7 @@
            [(ngModel)]="answer"
            name="{{question._id}}"/>
     True
-    <span [hidden]="!grading || 'true' !== question.correct">&#10004;</span>
+    <span class="check-mark" [hidden]="!grading || 'true' !== question.correct">&#10004;</span>
     <span [hidden]="!grading || 'true' !== answer || 'true' === question.correct">&#10060;</span>
   </label>
   <label  class="answer-option" [class]="{'correct': grading && 'false' === question.correct,
@@ -31,5 +33,5 @@
   <span [hidden]="!grading">Correct answer: {{question.correct}}</span>
   <br/>
 </div>
-<button (click)="grade()">Grade</button>
+<button class="grade-button" (click)="grade()">Grade</button>
 </div>
