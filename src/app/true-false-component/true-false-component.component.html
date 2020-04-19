@@ -1,24 +1,30 @@
-<p>true-false-component works!</p>
-<h4>{{question.title}}</h4>
-<h5>{{question.question}}</h5>
-<label>
-  <input type="radio"
-         value="true"
-         [(ngModel)]="answer"
-         name="{{question._id}}"/>
-  True
-</label>
-<br/>
-<label>
-  <input type="radio"
-         value="false"
-         [(ngModel)]="answer"
-         name="{{question._id}}"/>
-  False
-</label>
-<br/>
-Your answer: {{answer}}
-<br/>
-<span [hidden]="!grading">Correct answer: {{question.correct}}</span>
-<br/>
+<div>
+<div>
+  <div>{{question.question}}</div>
+  <label class="answer-option" [class]="{'correct': answer === question.correct && grading}">
+    <input type="radio"
+           value="true"
+           [(ngModel)]="answer"
+           name="{{question._id}}"/>
+    True
+    <span [hidden]="!grading || 'true' !== question.correct">&#10004;</span>
+    <span [hidden]="!grading || 'true' !== answer || 'true' === question.correct">&#10060;</span>
+  </label>
+  <br/>
+  <label  class="answer-option">
+    <input type="radio"
+           value="false"
+           [(ngModel)]="answer"
+           name="{{question._id}}"/>
+    False
+    <span [hidden]="!grading || 'false' !== question.correct">&#10004;</span>
+    <span [hidden]="!grading || 'false' !== answer || 'false' === question.correct">&#10060;</span>
+  </label>
+  <br/>
+  Your answer: {{answer}}
+  <br/>
+  <span [hidden]="!grading">Correct answer: {{question.correct}}</span>
+  <br/>
+</div>
 <button (click)="grade()">Grade</button>
+</div>

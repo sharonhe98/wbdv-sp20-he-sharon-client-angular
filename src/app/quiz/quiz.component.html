@@ -1,6 +1,5 @@
-<p>quiz works!</p>
-<ul>
-  <li *ngFor="let question of questions">
+<div class="col-4">
+  <div *ngFor="let question of questions" class="quiz">
     <div [ngSwitch]="question.type">
       <app-true-false-component
         [question]="question"
@@ -9,5 +8,5 @@
         [question]="question"
         *ngSwitchCase="'MULTIPLE_CHOICE'"></app-multiple-choice-question>
     </div>
-  </li>
-</ul>
+  </div>
+</div>

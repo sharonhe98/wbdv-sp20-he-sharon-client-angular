@@ -1,4 +1,3 @@
-<p>multiple-choice-question works!</p>
 <h4>{{question.title}}</h4>
 <h5>{{question.question}}</h5>
 {{question._id}}
@@ -9,6 +8,8 @@
            [(ngModel)]="answer"
            name="{{question._id}}"/>
     {{choice}}
+    <span [hidden]="!grading || choice !== question.correct">&#10004;</span>
+    <span [hidden]="!grading || choice !== answer || choice === question.correct">&#10060;</span>
   </label>
 </div>
 <br/>
