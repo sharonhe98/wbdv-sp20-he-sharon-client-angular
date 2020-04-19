@@ -1,0 +1,15 @@
+.start-quiz-button {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: cornflowerblue;
+  color: white;
+  float: right;
+  top: -10px;
+}
+
+.list-group-item {
+  padding: 20px;
+  display: block;
+  border: 1px grey solid;
+  align-content: center;
+}
