@@ -1,7 +1,12 @@
-<div>
-<div>
-  <div>{{question.question}}</div>
-  <label class="answer-option" [class]="{'correct': answer === question.correct && grading}">
+<div class="question-with-grade">
+<div class="question">
+  <span>
+    {{question.question}}
+    <span [hidden]="!grading || answer !== question.correct">&#10004;</span>
+    <span [hidden]="!grading || 'false' !== answer || 'false' === question.correct">&#10060;</span>
+  </span>
+  <label class="answer-option" [class]="{'correct': grading && 'true' === question.correct,
+  'wrong': answer !== question.correct && grading && answer === 'true'}">
     <input type="radio"
            value="true"
            [(ngModel)]="answer"
@@ -10,8 +15,8 @@
     <span [hidden]="!grading || 'true' !== question.correct">&#10004;</span>
     <span [hidden]="!grading || 'true' !== answer || 'true' === question.correct">&#10060;</span>
   </label>
-  <br/>
-  <label  class="answer-option">
+  <label  class="answer-option" [class]="{'correct': grading && 'false' === question.correct,
+  'wrong': answer !== question.correct && grading && answer === 'false'}">
     <input type="radio"
            value="false"
            [(ngModel)]="answer"

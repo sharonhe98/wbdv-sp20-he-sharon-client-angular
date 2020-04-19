@@ -1,8 +1,22 @@
 .correct {
   background-color: lightgreen;
-  width: 100%;
+}
+
+.wrong {
+  background-color: palevioletred;
 }
 
 .answer-option {
+  display: block;
+  margin: 0;
+  padding: 10px;
+  border: grey 1px solid;
+}
+
+.question-with-grade {
+  width: 100%;
+}
+
+.question {
   width: 100%;
 }
